@@ -1,5 +1,5 @@
 <template>
-  
+  <p>Este es List Products</p>
 </template>
 
 <script>

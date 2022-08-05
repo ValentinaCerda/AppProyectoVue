@@ -1,5 +1,5 @@
 <template>
-  
+  <p>Este es el Navbar</p>
 </template>
 
 <script>

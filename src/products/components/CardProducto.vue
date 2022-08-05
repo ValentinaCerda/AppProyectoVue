@@ -1,5 +1,5 @@
 <template>
-  
+  <p>Este es el Card Product</p>
 </template>
 
 <script>

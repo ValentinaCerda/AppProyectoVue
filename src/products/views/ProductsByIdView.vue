@@ -1,5 +1,5 @@
 <template>
-  
+  <p>Este es el Product By ID</p>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  
+  <p>Este es el Registro</p>
 </template>
 
 <script>
