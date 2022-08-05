@@ -1,10 +1,21 @@
 <template>
-  <p>Este es el Product By ID</p>
+  <pre> {{productoObject}} </pre>
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex';
 export default {
-
+  methods: {
+    ...mapActions({
+      productById: 'getProductByIdApi'
+    })
+  },
+  computed: {
+    ...mapState(['productoObject'])
+  },
+  created() {
+    this.productById(this.$route.params.id)
+  }
 }
 </script>
 

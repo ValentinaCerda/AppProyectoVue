@@ -12,6 +12,9 @@ export default createStore({
     },
     setProductById(state, payload) {
       state.productoObject = payload;
+    },
+    setUsuario(state, payload) {
+      state.usuario = payload;
     }
   },
   actions: { // llamados a APIs externas
@@ -33,6 +36,19 @@ export default createStore({
       } catch (error) {
         throw error;
       }
+    },
+    async loginUsuario({commit}, usuario) {
+      console.log(usuario);
+      // validaciones
+      try {
+        const response = await fetch('http://localhost:3000/users')
+        const data = await response.json();
+        console.log(data) // El arreglo con el único objeto que es el usuario
+      } catch (error) {
+        throw error
+      }
+      
+      commit('setUsuario', usuario)
     }
   },
   getters: {

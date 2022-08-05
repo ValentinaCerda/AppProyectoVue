@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
+    redirect: {name: 'login'} // redirección por el nombre de la ruta
   },
   {
     path: '/login',
@@ -20,12 +21,12 @@ const routes = [
     component: () => import(/* webpackChunkName: "productos"*/ '../products/HomeProducts.vue'),
     children: [
       {
-        path: 'list-products',
+        path: '',
         name: 'list-products',
         component: () => import(/* webpackChunkName: "lista-productos"*/ '../products/views/ListProductsView.vue')
       },
       {
-        path: ':id',
+        path: ':id', // ":" (dos puntos), son obligatorios cuando se quiere acceder a dato de URL
         name: 'product-id',
         component: () => import(/* webpackChunkName: "ProductoId"*/ '../products/views/ProductsByIdView.vue')
       }

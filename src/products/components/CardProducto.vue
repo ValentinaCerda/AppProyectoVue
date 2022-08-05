@@ -5,7 +5,7 @@
     <h5 class="mt-1 card-title text-center"> {{productoCard.title}} </h5>
   </div>
   <span class="d-block fw-bold text-center"> ${{ Intl.NumberFormat().format(productoCard.precio)}} </span>
-    <button class="btn btn-info mb-2 mt-2">Ir a producto</button>
+    <router-link class="btn btn-info mb-2 mt-2" :to="`/products/${productoCard.id}`">Ir a producto</router-link>
 </div>
 </template>
 
