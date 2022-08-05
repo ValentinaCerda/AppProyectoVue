@@ -15,6 +15,7 @@
           </div>
 
           <button type="submit" class="btn btn-success">Acceder</button>
+          <router-link class="btn btn-info mx-4" :to="`/register`">Registrar</router-link>
         </form>
       </div>
     </div>
